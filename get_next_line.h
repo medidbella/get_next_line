@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 15:56:06 by midbella          #+#    #+#             */
-/*   Updated: 2023/12/11 18:20:22 by midbella         ###   ########.fr       */
+/*   Updated: 2023/12/11 19:13:21 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10

@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:56:19 by midbella          #+#    #+#             */
-/*   Updated: 2023/12/11 18:19:38 by midbella         ###   ########.fr       */
+/*   Updated: 2023/12/11 22:11:24 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i] != '\0' && str)
 		i++;
 	return (i);
 }
@@ -89,12 +89,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	else if (s1 == NULL)
 		return (ft_strdup(s2));
 	else if (s2 == NULL)
-		return (ft_strdup(s1));
+		return (s1);
 	ls1 = ft_strlen(s1);
 	ls2 = ft_strlen(s2);
 	res = malloc(sizeof(char) * (ls1 + ls2 + 1));
 	if (res == NULL)
 		return (NULL);
+	res[ls1 + ls2] = '\0';
 	while (s1[i] != 0)
 	{
 		res[i] = s1[i];
